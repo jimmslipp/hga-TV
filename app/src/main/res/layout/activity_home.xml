@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_carbon"
+    android:orientation="horizontal"
+    android:padding="@dimen/screen_pad">
+
+    <!-- ============ left rail ============ -->
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/homeWordmark"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:longClickable="true"
+            android:src="@drawable/hga_wordmark" />
+
+        <TextView
+            android:id="@+id/menuLive"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:drawableLeft="@drawable/ic_live"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text="@string/menu_live" />
+
+        <TextView
+            android:id="@+id/menuMovies"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_movie"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text="@string/menu_movies" />
+
+        <TextView
+            android:id="@+id/menuSeries"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_series"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text="@string/menu_series" />
+
+        <TextView
+            android:id="@+id/menuFavourites"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_star"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text="@string/menu_favourites" />
+
+        <TextView
+            android:id="@+id/menuSettings"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text="@string/menu_settings" />
+    </LinearLayout>
+
+    <!-- ============ right hero ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="34dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/homeClock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/text_primary"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/homeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/carbon_line" />
+
+        <TextView
+            android:id="@+id/homeResume"
+            style="@style/Hga.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:drawableLeft="@drawable/ic_live"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:text=""
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRecent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:clipToPadding="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/homeAccount"
+                style="@style/Hga.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/homeAdStatus"
+                style="@style/Hga.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textColor="@color/text_dim"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

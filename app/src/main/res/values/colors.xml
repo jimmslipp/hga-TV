@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================
+         HGA-Media palette. Modelled on the EmulationStation "Carbon"
+         theme: near-black carbon weave, cool white text, one bright
+         accent used for focus and live indicators.
+
+         >>> To rebrand the whole app, change hga_accent below. <<<
+         ============================================================ -->
+
+    <color name="hga_accent">#00B9F1</color>
+    <color name="hga_accent_dim">#0A6F8F</color>
+    <color name="hga_accent_glow">#3300B9F1</color>
+
+    <color name="carbon_bg">#0B0C0E</color>
+    <color name="carbon_surface">#15171A</color>
+    <color name="carbon_surface_alt">#1D2024</color>
+    <color name="carbon_line">#2A2E33</color>
+    <color name="carbon_weave_dark">#0A0B0D</color>
+    <color name="carbon_weave_light">#131518</color>
+
+    <color name="text_primary">#F2F4F5</color>
+    <color name="text_secondary">#9BA3AB</color>
+    <color name="text_dim">#6B7278</color>
+    <color name="text_on_accent">#04121A</color>
+
+    <color name="live_red">#FF3B30</color>
+    <color name="ok_green">#3ED27A</color>
+    <color name="warn_amber">#FFB300</color>
+
+    <color name="scrim_60">#99000000</color>
+    <color name="scrim_85">#D9000000</color>
+    <color name="transparent">#00000000</color>
+</resources>
