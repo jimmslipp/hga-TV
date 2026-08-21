@@ -1,0 +1,68 @@
+# ============================================================================
+#  HGA-Media - automatic APK builder
+#
+#  You do NOT need to install anything on your computer. When this file is in
+#  your GitHub repository, GitHub builds the app for you on its own machines
+#  and hands you an installable APK.
+#
+#  To run it: open your repository on github.com, click the "Actions" tab,
+#  choose "Build HGA-Media APK" on the left, then press "Run workflow".
+#  Wait a few minutes, then download "HGA-Media-APK" from the finished run.
+# ============================================================================
+name: Build HGA-Media APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build installable APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up the Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: "8.7"
+
+      - name: Show what was uploaded
+        run: ls -la
+
+      - name: Build the app
+        run: gradle assembleDebug --no-daemon --stacktrace
+
+      - name: Give the file a friendly name
+        run: |
+          mkdir -p out
+          cp app/build/outputs/apk/debug/app-debug.apk "out/HGA-Media.apk"
+          ls -lh out
+
+      - name: Upload the APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: HGA-Media-APK
+          path: out/HGA-Media.apk
+          retention-days: 90
+
+      - name: Publish a release when a version tag is pushed
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/HGA-Media.apk
+          generate_release_notes: true

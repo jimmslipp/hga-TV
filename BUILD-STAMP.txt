@@ -1,0 +1,1 @@
+HGA-Media build package: 2026-08-21 07:48 UTC  (rev G - category crash fixed everywhere, per-section category picker, A-Z jump rail for TV remotes, advert URL + preview fixes)

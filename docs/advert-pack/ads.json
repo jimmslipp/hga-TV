@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "updated": "2026-08-19",
+  "settings": {
+    "mode": "lbar",
+    "intervalSeconds": 600,
+    "displaySeconds": 20,
+    "interstitialSeconds": 6,
+    "showOnChannelChange": true,
+    "zapCooldownSeconds": 180,
+    "syncMinutes": 60,
+    "quietStart": "",
+    "quietEnd": "",
+    "muteDuringOverlay": false
+  },
+  "ads": [
+    {
+      "id": "hga-arcade-01",
+      "name": "Hooked Gaming Arcade",
+      "type": "image",
+      "url": "example-fullscreen.jpg",
+      "lbarUrl": "example-lbar.png",
+      "durationSeconds": 20,
+      "weight": 3
+    },
+    {
+      "id": "happy-hour",
+      "name": "Happy Hour 5-7",
+      "type": "image",
+      "url": "example-overlay.jpg",
+      "durationSeconds": 15,
+      "weight": 2,
+      "daysOfWeek": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "startTime": "16:30",
+      "endTime": "19:30"
+    },
+    {
+      "id": "summer-promo",
+      "name": "Summer promotion",
+      "type": "image",
+      "url": "example-fullscreen.jpg",
+      "durationSeconds": 15,
+      "weight": 1,
+      "startDate": "2026-06-01",
+      "endDate": "2026-09-01"
+    }
+  ]
+}
